@@ -1,0 +1,23 @@
+JLPTrainer (new)
+
+Rails API backend
+React Vite Frontend
+
+App can be accessed without logging in, but can't save progress
+
+User not logged in:
+  1. Landing = Open App
+  2. Index = Select JLPT level or Random Kanji (from all levels)
+  3. Kanji Index = Can see all kanji for that level, click button to test.
+  5. Go through flashcards (10 at a time, then ask if want to continue)
+  6. If stopped, back to Kanji Index.
+
+User logged in:
+  1. Landing = Open App
+  2. User logs in
+  3. Index = Select JLPT level or Random Kanji (from all levels)
+  4. Kanji Index = Can see all kanji for that level, click button to test.
+  5. Go through flashcards (10 at a time, then ask if want to continue)
+  6. If stopped, back to Kanji Index.
+
+Option to play trash or treasure game?
