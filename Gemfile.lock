@@ -80,6 +80,8 @@ GEM
       mutex_m
       securerandom (>= 0.3)
       tzinfo (~> 2.0)
+    addressable (2.8.8)
+      public_suffix (>= 2.0.2, < 8.0)
     base64 (0.3.0)
     benchmark (0.5.0)
     bigdecimal (4.0.1)
@@ -162,6 +164,7 @@ GEM
     psych (5.3.1)
       date
       stringio
+    public_suffix (7.0.0)
     puma (7.1.0)
       nio4r (~> 2.0)
     racc (1.8.1)
@@ -237,6 +240,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  addressable
   bootsnap
   debug
   pg (~> 1.1)
