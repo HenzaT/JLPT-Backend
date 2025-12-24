@@ -3,7 +3,11 @@ module Api
   module V1
     class KanjiCharactersController < ApplicationController
       def index
-        kanjis = KanjiCharacter.all
+        if params[:jlpt]
+          kanjis = KanjiCharacter.where(jlpt: params[:jlpt])
+        else
+          kanjis = KanjiCharacter.all
+        end
         render json: kanjis, status: :ok
       end
 
