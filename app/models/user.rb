@@ -2,6 +2,8 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable, :api
+  has_many :learnt_kanjis
+  has_many :kanji_characters, through: :learnt_kanjis
 
   validates :firstname, :email, :password, presence: true
   validates :firstname, length: { minimum: 2 }
