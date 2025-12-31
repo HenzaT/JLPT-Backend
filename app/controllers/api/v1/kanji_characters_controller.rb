@@ -17,6 +17,11 @@ module Api
       rescue ActiveRecord::RecordNotFound
         render json: { error: 'Kanji not found' }, status: :not_found
       end
+
+      # /api/v1/kanji_characters/counts
+      def counts
+        render json: KanjiCharacter.group(:jlpt).count, status: :ok
+      end
     end
   end
 end
