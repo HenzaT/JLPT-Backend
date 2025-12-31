@@ -23,10 +23,19 @@ module Api
         end
       end
 
-      # def update
-      #   learnt_kanji = LearntKanji.find(params[:id])
-      #   render json: learnt_kanji, status: :ok
-      # end
+      def update
+        learnt_kanji = LearntKanji.find(params[:id])
+        if learnt_kanji.update(learnt_kanji_params)
+          render json: learnt_kanji, status: :ok
+        else
+          render json: { errors: learnt_kanji.errors.full_messages }, status: :unprocessable_entity
+        end
+      end
+
+      def destroy
+        learnt_kanji = LearntKanji.find(params[:id])
+        learnt_kanji.destroy
+      end
 
       private
 
