@@ -19,6 +19,8 @@ Rails.application.routes.draw do
       resources :kanji_characters, only: %i[index show update] do
         collection do
           get :counts
+          get :random
+          get :get_ten
         end
       end
       resources :learnt_kanjis
