@@ -20,7 +20,7 @@ Rails.application.routes.draw do
         collection do
           get :counts
           get :random
-          get :get_ten
+          get :ten_kanjis
         end
       end
       resources :learnt_kanjis

@@ -34,7 +34,7 @@ module Api
         render json: random_kanji, status: :ok
       end
 
-      def get_ten
+      def ten_kanjis
         if params[:jlpt]
           kanjis = KanjiCharacter.where(jlpt: params[:jlpt])
         else
